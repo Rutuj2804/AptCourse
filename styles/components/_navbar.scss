@@ -1,0 +1,11 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    .navbar__Left {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+}

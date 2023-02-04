@@ -1,0 +1,32 @@
+.coursecard {
+    height: 250px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 0 10px 5px $shadow;
+    margin-bottom: 20px;
+    .image {
+        width: 50%;
+        height: 100%;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+    }
+    .details{
+        flex: 1;
+        margin-left: 5px;
+        padding: 10px;
+        h6 {
+            font-weight: 600;
+        }
+        p{
+            font-size: 14px;
+            color: $gray;
+        }
+    }
+}

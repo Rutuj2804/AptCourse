@@ -5,3 +5,7 @@ const Login = () => {
 };
 
 export default Login;
+
+Login.getLayout = (page) => (
+	<>{page}</>
+)

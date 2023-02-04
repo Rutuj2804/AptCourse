@@ -5,3 +5,7 @@ const Register = () => {
 };
 
 export default Register;
+
+Register.getLayout = (page) => (
+	<>{page}</>
+)
