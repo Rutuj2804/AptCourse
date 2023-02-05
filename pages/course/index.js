@@ -466,7 +466,7 @@ const Course = () => {
 										<p>Content Time</p>
 									</div>
 								</div>
-								<SecondaryButton startIcon={<FaPlay />}>
+								<SecondaryButton startIcon={<FaPlay />} onClick={()=>router.push("/watch/123")}>
 									Resume Journey
 								</SecondaryButton>
 							</div>
