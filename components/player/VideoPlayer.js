@@ -12,7 +12,7 @@ import {
 	VolumeUpRounded,
 } from "@mui/icons-material";
 
-const VideoPlayer = () => {
+const VideoPlayer = ({children}) => {
 	const [isPaused, setIsPaused] = useState(false);
 	const [isMute, setIsMute] = useState(false);
 	const [progressBar, setProgressBar] = useState("0");
@@ -348,6 +348,7 @@ const VideoPlayer = () => {
 					ref={videoRef}
 				></video>
 			</div>
+			{children}
 		</section>
 	);
 };
