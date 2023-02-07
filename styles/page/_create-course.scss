@@ -1,0 +1,43 @@
+.createCourse {
+    form {
+        .title {
+            margin-top: 20px;
+            text-transform: capitalize;
+        }
+        .inputDiv {
+            width: 100%;
+            position: relative;
+            margin: 20px 0;
+            input, textarea, select {
+                width: 100%;
+                padding: 10px 20px;
+                border-radius: 4px;
+                max-height: 20vh;
+                outline: none;
+                border: 1px solid $gray;
+                &:valid ~ label,&:focus ~ label {
+                    top: -8px;
+                    left: 10px;
+                    font-size: 12px;
+                    padding: 0 4px;
+                    background-color: $white;
+                    transition: all 0.2s linear;
+                }
+            }
+            label {
+                position: absolute;
+                top: 10px;
+                left: 20px;
+                pointer-events: none;
+                transition: all 0.2s linear;
+                &.up {
+                    top: -8px;
+                    left: 10px;
+                    font-size: 12px;
+                    padding: 0 4px;
+                    background-color: $white;
+                }
+            }
+        }
+    }
+}

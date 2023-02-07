@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import CourseOne from "../../assets/course1.jpg";
 import SecondaryButton from "../../components/button/secondary";
 import PrimaryButton from "../../components/button/primary";
@@ -9,6 +9,8 @@ import { Avatar } from "@mui/material";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import LessonsCard from "../../components/card/LessonsCard";
+import { useDispatch } from "react-redux";
+import { setLoading } from "../../store/settings"
 
 const chaptersData = [
 	{
@@ -409,6 +411,13 @@ const chaptersData = [
 
 const Course = () => {
 	const router = useRouter();
+
+	const dispatch = useDispatch()
+
+	useEffect(()=>{
+		dispatch(setLoading(true))
+		setTimeout(()=>dispatch(setLoading(false)), 3000)
+	}, [])
 
 	return (
 		<>

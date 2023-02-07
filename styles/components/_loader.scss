@@ -1,0 +1,17 @@
+.loader{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: $white, $alpha: 0.6);
+    .central {
+        max-width: 350px;
+        svg:last-child{
+            display: none;
+        }
+    }
+}

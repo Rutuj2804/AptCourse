@@ -1,22 +1,28 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    sidebar: true,
+    sidebar: false,
+    isLoading: false,
+    success: "",
 };
 
-// Actual Slice
 export const settingsSlice = createSlice({
     name: "auth",
     initialState,
     reducers: {
-        // Action to set the authentication status
         toggleSidebar(state) {
             state.sidebar = !state.sidebar;
+        },
+        setSuccess(state, action) {
+            state.success = action.payload
+        },
+        setLoading(state, action) {
+            state.isLoading = action.payload
         },
     },
 });
 
-export const { toggleSidebar } =
+export const { toggleSidebar, setSuccess, setLoading } =
     settingsSlice.actions;
 
 export default settingsSlice.reducer;

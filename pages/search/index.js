@@ -1,12 +1,26 @@
 import { Button } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import { TbSearch } from "react-icons/tb";
 import CourseCard from "../../components/card/CourseCard";
 import { BsArrowRight } from "react-icons/bs"
+import { useDispatch } from "react-redux";
+import { setLoading } from "../../store/settings";
+import Head from "next/head";
 
 const Search = () => {
+
+	const dispatch = useDispatch()
+
+	useEffect(()=>{
+		dispatch(setLoading(true))
+		setTimeout(()=>dispatch(setLoading(false)), 3000)
+	}, [])
+
 	return (
 		<div className="search__wrapper">
+			<Head>
+				<title>Search</title>
+			</Head>
 			<div className="container">
 				<div className="form">
 					<div className="row">

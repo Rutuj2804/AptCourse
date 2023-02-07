@@ -10,12 +10,16 @@
 @import "./components/sidebar";
 @import "./components/links-card";
 @import "./components/video-player";
+@import "./components/report-message";
+@import "./components/loader";
 
 @import "./page/home";
 @import "./page/search";
 @import "./page/course.scss";
 @import "./page/author";
 @import "./page/watch";
+@import "./page/create-course";
+@import "./page/auth";
 
 * {
   margin: 0%;

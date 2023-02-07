@@ -21,4 +21,7 @@
             margin-bottom: 30px;
         }
     }
+    .svg-disable svg:last-child{
+        display: none;
+    }
 }

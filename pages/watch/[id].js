@@ -46,6 +46,7 @@ const lessonsData = [
 ];
 
 const Watch = () => {
+
 	return (
 		<section className="watch__ContainerWrapper">
 			<Head>

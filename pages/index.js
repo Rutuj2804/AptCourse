@@ -1,13 +1,36 @@
 import Head from "next/head";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import HomeImage from "../assets/home.svg";
 import SecondaryButton from "../components/button/secondary";
 import { BiNavigation } from "react-icons/bi";
 import { useRouter } from "next/router";
+import animationData from "../assets/data/a.json"
+import Lottie from "lottie-web";
+import { useDispatch } from "react-redux";
+import { setLoading } from "../store/settings";
 
 const Index = () => {
 	const router = useRouter();
+
+	const container = useRef()
+
+	const dispatch = useDispatch()
+
+	useEffect(()=>{
+		dispatch(setLoading(true))
+		setTimeout(()=>dispatch(setLoading(false)), 3000)
+	}, [])
+
+    useEffect(()=>{
+        Lottie.loadAnimation({
+            container: container.current,
+            renderer: "svg",
+            loop: true,
+            autoplay: true,
+            animationData: animationData
+        })
+    }, [])
 
 	return (
 		<div>
@@ -42,12 +65,12 @@ const Index = () => {
 							</div>
 						</div>
 						<div className="col-lg-6 col-md-6 col-12">
-							<div className="image">
-								<Image
+							<div className="image svg-disable" ref={container}>
+								{/* <Image
 									src={HomeImage}
 									alt="home"
 									height={400}
-								/>
+								/> */}
 							</div>
 						</div>
 					</div>
