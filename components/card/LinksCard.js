@@ -2,17 +2,17 @@ import React, { useState } from "react";
 import { RiLinksFill } from "react-icons/ri";
 
 const linksData = [
-	{ link: "http://google.com" },
-	{ link: "http://google.com" },
-	{ link: "http://google.com" },
-	{ link: "http://google.com" },
-	{ link: "http://google.com" },
-	{ link: "http://google.com" },
-	{ link: "http://google.com" },
-	{ link: "http://google.com" },
-	{ link: "http://google.com" },
-	{ link: "http://google.com" },
-	{ link: "http://google.com" },
+	{ link: "http://dummy-links.com" },
+	{ link: "http://dummy-links.com" },
+	{ link: "http://dummy-links.com" },
+	{ link: "http://dummy-links.com" },
+	{ link: "http://dummy-links.com" },
+	{ link: "http://dummy-links.com" },
+	{ link: "http://dummy-links.com" },
+	{ link: "http://dummy-links.com" },
+	{ link: "http://dummy-links.com" },
+	{ link: "http://dummy-links.com" },
+	{ link: "http://dummy-links.com" },
 ];
 
 const LinksCard = () => {

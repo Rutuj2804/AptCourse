@@ -1,6 +1,9 @@
 import one from "../course1.jpg"
 import two from "../course2.jpg"
 import three from "../course3.jpg"
+import four from "../js.jpg"
+import five from "../next.jpg"
+import six from "../java.jpg"
 
 export default [
     {
@@ -813,12 +816,12 @@ export default [
     },
     {
         id: 4,
-        name: "Java Programming Masterclass",
+        name: "Android development with Java",
         subDescription: "Learn Java In This Course And Become a Computer Programmer. Obtain valuable Core Java Skills And Java Certification",
         isFree: false,
         registeredStudents: "100k+",
         isSaved: true,
-        coverImage: one,
+        coverImage: six,
         user: {
             name: "Arya Stark",
             followers: "1M+"
@@ -898,7 +901,7 @@ export default [
                         },
                     },
                     {
-                        name: "Crawling the web",
+                        name: "Advance Java Concepts",
                         isFree: true,
                         duration: {
                             hr: 0,
@@ -906,7 +909,7 @@ export default [
                         },
                     },
                     {
-                        name: "Beautiful Soup HTML parsing",
+                        name: "Theory of Andorid development",
                         isFree: false,
                         duration: {
                             hr: 0,
@@ -914,7 +917,7 @@ export default [
                         },
                     },
                     {
-                        name: "GUI with Tkinter",
+                        name: "Installing setup for development",
                         isFree: false,
                         duration: {
                             hr: 1,
@@ -922,7 +925,7 @@ export default [
                         },
                     },
                     {
-                        name: "Assignment",
+                        name: "1st Android App",
                         isFree: false,
                         duration: {
                             hr: 0,
@@ -932,7 +935,7 @@ export default [
                 ],
             },
             {
-                name: "Data Analysis",
+                name: "Android Development",
                 duration: {
                     hr: 10,
                     mn: 32,
@@ -949,7 +952,7 @@ export default [
                         },
                     },
                     {
-                        name: "What is Data analysis",
+                        name: "Folder structure",
                         isFree: true,
                         duration: {
                             hr: 0,
@@ -957,7 +960,7 @@ export default [
                         },
                     },
                     {
-                        name: "Numpy",
+                        name: "Designing UI",
                         isFree: false,
                         duration: {
                             hr: 1,
@@ -965,7 +968,7 @@ export default [
                         },
                     },
                     {
-                        name: "Pandas",
+                        name: "Events",
                         isFree: false,
                         duration: {
                             hr: 1,
@@ -973,7 +976,7 @@ export default [
                         },
                     },
                     {
-                        name: "Matplotlib",
+                        name: "Firebase as backend",
                         isFree: false,
                         duration: {
                             hr: 0,
@@ -981,7 +984,7 @@ export default [
                         },
                     },
                     {
-                        name: "Exercise 1",
+                        name: "Basic calculator app",
                         isFree: false,
                         duration: {
                             hr: 0,
@@ -989,7 +992,58 @@ export default [
                         },
                     },
                     {
-                        name: "Exercise 2",
+                        name: "Android app to store data",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 15,
+                        },
+                    },
+                ],
+            },
+            {
+                name: "Fullstack Android Development",
+                duration: {
+                    hr: 10,
+                    mn: 32,
+                },
+                description:
+                    "Create your first scene and understand fundamentals like cameras, geometries, materials, textures. Add a debug panel to tweak your environment and animate everything.",
+                lessons: [
+                    {
+                        name: "Introduction",
+                        isFree: true,
+                        duration: {
+                            hr: 0,
+                            mn: 32,
+                        },
+                    },
+                    {
+                        name: "Connecting database",
+                        isFree: true,
+                        duration: {
+                            hr: 0,
+                            mn: 23,
+                        },
+                    },
+                    {
+                        name: "Good practices",
+                        isFree: false,
+                        duration: {
+                            hr: 1,
+                            mn: 55,
+                        },
+                    },
+                    {
+                        name: "Assets for development",
+                        isFree: false,
+                        duration: {
+                            hr: 1,
+                            mn: 25,
+                        },
+                    },
+                    {
+                        name: "CRUD operations",
                         isFree: false,
                         duration: {
                             hr: 0,
@@ -997,11 +1051,836 @@ export default [
                         },
                     },
                     {
-                        name: "What to learn next",
+                        name: "Blog Application",
                         isFree: false,
                         duration: {
                             hr: 0,
                             mn: 15,
+                        },
+                    },
+                    {
+                        name: "What to do next?",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 15,
+                        },
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        id: 5,
+        name: "Django and Django Rest Framework",
+        subDescription: "Learn Java In This Course And Become a Computer Programmer. Obtain valuable Core Java Skills And Java Certification",
+        isFree: false,
+        registeredStudents: "100k+",
+        isSaved: false,
+        coverImage: three,
+        user: {
+            name: "Ned Stark",
+            followers: "100k+"
+        },
+        information: {
+            lessons: 22,
+            chapters: 4,
+            contentTime: 26
+        },
+        chapters: [
+            {
+                name: "Basics",
+                duration: {
+                    hr: 10,
+                    mn: 32,
+                },
+                description:
+                    "Create your first scene and understand fundamentals like cameras, geometries, materials, textures. Add a debug panel to tweak your environment and animate everything.",
+                lessons: [
+                    {
+                        name: "Introduction",
+                        isFree: true,
+                        duration: {
+                            hr: 0,
+                            mn: 32,
+                        },
+                    },
+                    {
+                        name: "Why use Django",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 23,
+                        },
+                    },
+                    {
+                        name: "Editor, language support and installations",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 55,
+                        },
+                    },
+                    {
+                        name: "Basic python",
+                        isFree: false,
+                        duration: {
+                            hr: 2,
+                            mn: 25,
+                        },
+                    },
+                    {
+                        name: "Exercises",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 15,
+                        },
+                    },
+                ],
+            },
+            {
+                name: "Starting with Django",
+                duration: {
+                    hr: 10,
+                    mn: 32,
+                },
+                description:
+                    "Create your first scene and understand fundamentals like cameras, geometries, materials, textures. Add a debug panel to tweak your environment and animate everything.",
+                lessons: [
+                    {
+                        name: "Introduction",
+                        isFree: true,
+                        duration: {
+                            hr: 0,
+                            mn: 32,
+                        },
+                    },
+                    {
+                        name: "Setup a Django project",
+                        isFree: true,
+                        duration: {
+                            hr: 0,
+                            mn: 23,
+                        },
+                    },
+                    {
+                        name: "Folder structure",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 55,
+                        },
+                    },
+                    {
+                        name: "Creating models",
+                        isFree: false,
+                        duration: {
+                            hr: 1,
+                            mn: 25,
+                        },
+                    },
+                    {
+                        name: "Connecting with HTML",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 55,
+                        },
+                    },
+                ],
+            },
+            {
+                name: "Advance Django",
+                duration: {
+                    hr: 10,
+                    mn: 32,
+                },
+                description:
+                    "Create your first scene and understand fundamentals like cameras, geometries, materials, textures. Add a debug panel to tweak your environment and animate everything.",
+                lessons: [
+                    {
+                        name: "Methoda and libraries",
+                        isFree: true,
+                        duration: {
+                            hr: 0,
+                            mn: 32,
+                        },
+                    },
+                    {
+                        name: "Cors",
+                        isFree: true,
+                        duration: {
+                            hr: 0,
+                            mn: 23,
+                        },
+                    },
+                    {
+                        name: "Creating 1st project",
+                        isFree: false,
+                        duration: {
+                            hr: 1,
+                            mn: 55,
+                        },
+                    },
+                    {
+                        name: "Exercise",
+                        isFree: false,
+                        duration: {
+                            hr: 1,
+                            mn: 25,
+                        },
+                    },
+                    {
+                        name: "Connecting database",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 15,
+                        },
+                    },
+                    {
+                        name: "Using database with frontend",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 15,
+                        },
+                    },
+                    {
+                        name: "Simple Blog App",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 15,
+                        },
+                    },
+                ],
+            },
+            {
+                name: "Django Rest Framework",
+                duration: {
+                    hr: 10,
+                    mn: 32,
+                },
+                description:
+                    "Create your first scene and understand fundamentals like cameras, geometries, materials, textures. Add a debug panel to tweak your environment and animate everything.",
+                lessons: [
+                    {
+                        name: "Introduction",
+                        isFree: true,
+                        duration: {
+                            hr: 0,
+                            mn: 32,
+                        },
+                    },
+                    {
+                        name: "What are APIs and why use it?",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 23,
+                        },
+                    },
+                    {
+                        name: "Good practices",
+                        isFree: false,
+                        duration: {
+                            hr: 1,
+                            mn: 55,
+                        },
+                    },
+                    {
+                        name: "Serializers",
+                        isFree: false,
+                        duration: {
+                            hr: 1,
+                            mn: 25,
+                        },
+                    },
+                    {
+                        name: "Creating APIs for Blog App",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 15,
+                        },
+                    },
+                    {
+                        name: "Exercises",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 15,
+                        },
+                    },
+                    {
+                        name: "Assignment",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 15,
+                        },
+                    },
+                ],
+            },
+            {
+                name: "Django Deployment",
+                duration: {
+                    hr: 10,
+                    mn: 32,
+                },
+                description:
+                    "Create your first scene and understand fundamentals like cameras, geometries, materials, textures. Add a debug panel to tweak your environment and animate everything.",
+                lessons: [
+                    {
+                        name: "Introduction",
+                        isFree: true,
+                        duration: {
+                            hr: 0,
+                            mn: 32,
+                        },
+                    },
+                    {
+                        name: "Sites to host Django App",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 23,
+                        },
+                    },
+                    {
+                        name: "Hosting on PythonAnywhere",
+                        isFree: false,
+                        duration: {
+                            hr: 1,
+                            mn: 55,
+                        },
+                    },
+                    {
+                        name: "Hosting on Heroku",
+                        isFree: false,
+                        duration: {
+                            hr: 1,
+                            mn: 25,
+                        },
+                    },
+                    {
+                        name: "Hosting on Vercel",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 15,
+                        },
+                    },
+                    {
+                        name: "Hosting on GitHub",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 15,
+                        },
+                    },
+                    {
+                        name: "What next?",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 15,
+                        },
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        id: 6,
+        name: "NestJS Basics to Advance",
+        subDescription: "Learn Java In This Course And Become a Computer Programmer. Obtain valuable Core Java Skills And Java Certification",
+        isFree: true,
+        registeredStudents: "150k+",
+        isSaved: true,
+        coverImage: four,
+        user: {
+            name: "Rob Stark",
+            followers: "850k+"
+        },
+        information: {
+            lessons: 12,
+            chapters: 4,
+            contentTime: 17
+        },
+        chapters: [
+            {
+                name: "Basics",
+                duration: {
+                    hr: 10,
+                    mn: 32,
+                },
+                description:
+                    "Create your first scene and understand fundamentals like cameras, geometries, materials, textures. Add a debug panel to tweak your environment and animate everything.",
+                lessons: [
+                    {
+                        name: "Introduction",
+                        isFree: true,
+                        duration: {
+                            hr: 0,
+                            mn: 32,
+                        },
+                    },
+                    {
+                        name: "Why use NestJS",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 23,
+                        },
+                    },
+                    {
+                        name: "Comparision between NestJS and ExpressJS",
+                        isFree: false,
+                        duration: {
+                            hr: 2,
+                            mn: 25,
+                        },
+                    },
+                    {
+                        name: "Editor, language support and installations",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 55,
+                        },
+                    },
+                    {
+                        name: "Exercises",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 15,
+                        },
+                    },
+                ],
+            },
+            {
+                name: "Starting with NestJS",
+                duration: {
+                    hr: 10,
+                    mn: 32,
+                },
+                description:
+                    "Create your first scene and understand fundamentals like cameras, geometries, materials, textures. Add a debug panel to tweak your environment and animate everything.",
+                lessons: [
+                    {
+                        name: "Introduction",
+                        isFree: true,
+                        duration: {
+                            hr: 0,
+                            mn: 32,
+                        },
+                    },
+                    {
+                        name: "Setup a NestJS project",
+                        isFree: true,
+                        duration: {
+                            hr: 0,
+                            mn: 23,
+                        },
+                    },
+                    {
+                        name: "Folder structure",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 55,
+                        },
+                    },
+                    {
+                        name: "DTOs, interfaces and types",
+                        isFree: false,
+                        duration: {
+                            hr: 1,
+                            mn: 25,
+                        },
+                    },
+                    {
+                        name: "Best practises for folder structure",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 55,
+                        },
+                    },
+                ],
+            },
+            {
+                name: "Advance NestJS",
+                duration: {
+                    hr: 10,
+                    mn: 32,
+                },
+                description:
+                    "Create your first scene and understand fundamentals like cameras, geometries, materials, textures. Add a debug panel to tweak your environment and animate everything.",
+                lessons: [
+                    {
+                        name: "Connecting with database",
+                        isFree: true,
+                        duration: {
+                            hr: 0,
+                            mn: 32,
+                        },
+                    },
+                    {
+                        name: "Mongoose and Models",
+                        isFree: true,
+                        duration: {
+                            hr: 0,
+                            mn: 23,
+                        },
+                    },
+                    {
+                        name: "Creating 1st project",
+                        isFree: false,
+                        duration: {
+                            hr: 1,
+                            mn: 55,
+                        },
+                    },
+                    {
+                        name: "Exercise",
+                        isFree: false,
+                        duration: {
+                            hr: 1,
+                            mn: 25,
+                        },
+                    },
+                    {
+                        name: "Blog Application API",
+                        duration: {
+                            hr: 1,
+                            mn: 25,
+                        },
+                    },
+                    {
+                        name: "Postman for testing",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 15,
+                        },
+                    },
+                ],
+            },
+            {
+                name: "NestJS Web Sockets",
+                duration: {
+                    hr: 10,
+                    mn: 32,
+                },
+                description:
+                    "Create your first scene and understand fundamentals like cameras, geometries, materials, textures. Add a debug panel to tweak your environment and animate everything.",
+                lessons: [
+                    {
+                        name: "Introduction",
+                        isFree: true,
+                        duration: {
+                            hr: 0,
+                            mn: 32,
+                        },
+                    },
+                    {
+                        name: "What are sockets?",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 23,
+                        },
+                    },
+                    {
+                        name: "Sockets in NestJS",
+                        isFree: false,
+                        duration: {
+                            hr: 1,
+                            mn: 55,
+                        },
+                    },
+                    {
+                        name: "Chat Application",
+                        isFree: false,
+                        duration: {
+                            hr: 1,
+                            mn: 25,
+                        },
+                    },
+                    {
+                        name: "Exercises",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 15,
+                        },
+                    },
+                    {
+                        name: "Assignment",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 15,
+                        },
+                    },
+                ],
+            },
+        ],
+    },
+    {
+        id: 7,
+        name: "NextJS Basics to Advance",
+        subDescription: "Learn Java In This Course And Become a Computer Programmer. Obtain valuable Core Java Skills And Java Certification",
+        isFree: true,
+        registeredStudents: "150k+",
+        isSaved: true,
+        coverImage: five,
+        user: {
+            name: "Rob Stark",
+            followers: "850k+"
+        },
+        information: {
+            lessons: 12,
+            chapters: 4,
+            contentTime: 17
+        },
+        chapters: [
+            {
+                name: "Basics",
+                duration: {
+                    hr: 10,
+                    mn: 32,
+                },
+                description:
+                    "Create your first scene and understand fundamentals like cameras, geometries, materials, textures. Add a debug panel to tweak your environment and animate everything.",
+                lessons: [
+                    {
+                        name: "Introduction",
+                        isFree: true,
+                        duration: {
+                            hr: 0,
+                            mn: 32,
+                        },
+                    },
+                    {
+                        name: "Why use NextJS",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 23,
+                        },
+                    },
+                    {
+                        name: "Comparision between NextJS and ReactJS",
+                        isFree: false,
+                        duration: {
+                            hr: 2,
+                            mn: 25,
+                        },
+                    },
+                    {
+                        name: "Client Side and Server Side rendering",
+                        isFree: false,
+                        duration: {
+                            hr: 2,
+                            mn: 25,
+                        },
+                    },
+                    {
+                        name: "Editor, language support and installations",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 55,
+                        },
+                    },
+                    {
+                        name: "Exercises",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 15,
+                        },
+                    },
+                ],
+            },
+            {
+                name: "Starting with NextJS",
+                duration: {
+                    hr: 10,
+                    mn: 32,
+                },
+                description:
+                    "Create your first scene and understand fundamentals like cameras, geometries, materials, textures. Add a debug panel to tweak your environment and animate everything.",
+                lessons: [
+                    {
+                        name: "Introduction",
+                        isFree: true,
+                        duration: {
+                            hr: 0,
+                            mn: 32,
+                        },
+                    },
+                    {
+                        name: "Setup a NextJS project",
+                        isFree: true,
+                        duration: {
+                            hr: 0,
+                            mn: 23,
+                        },
+                    },
+                    {
+                        name: "Folder structure",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 55,
+                        },
+                    },
+                    {
+                        name: "Routing",
+                        isFree: false,
+                        duration: {
+                            hr: 1,
+                            mn: 25,
+                        },
+                    },
+                    {
+                        name: "Best practises for folder structure",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 55,
+                        },
+                    },
+                ],
+            },
+            {
+                name: "Advance NextJS",
+                duration: {
+                    hr: 10,
+                    mn: 32,
+                },
+                description:
+                    "Create your first scene and understand fundamentals like cameras, geometries, materials, textures. Add a debug panel to tweak your environment and animate everything.",
+                lessons: [
+                    {
+                        name: "State Management",
+                        isFree: true,
+                        duration: {
+                            hr: 0,
+                            mn: 32,
+                        },
+                    },
+                    {
+                        name: "Redux toolkit",
+                        isFree: true,
+                        duration: {
+                            hr: 0,
+                            mn: 23,
+                        },
+                    },
+                    {
+                        name: "Creating 1st project",
+                        isFree: false,
+                        duration: {
+                            hr: 1,
+                            mn: 55,
+                        },
+                    },
+                    {
+                        name: "Exercise",
+                        isFree: false,
+                        duration: {
+                            hr: 1,
+                            mn: 25,
+                        },
+                    },
+                    {
+                        name: "Blog Application",
+                        duration: {
+                            hr: 1,
+                            mn: 25,
+                        },
+                    },
+                    {
+                        name: "Connecting Backend",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 15,
+                        },
+                    },
+                ],
+            },
+            {
+                name: "NextJS Deployment",
+                duration: {
+                    hr: 10,
+                    mn: 32,
+                },
+                description:
+                    "Create your first scene and understand fundamentals like cameras, geometries, materials, textures. Add a debug panel to tweak your environment and animate everything.",
+                lessons: [
+                    {
+                        name: "Introduction",
+                        isFree: true,
+                        duration: {
+                            hr: 0,
+                            mn: 32,
+                        },
+                    },
+                    {
+                        name: "Sites for deployment",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 23,
+                        },
+                    },
+                    {
+                        name: "Deployment on Vercel",
+                        isFree: false,
+                        duration: {
+                            hr: 1,
+                            mn: 55,
+                        },
+                    },
+                    {
+                        name: "Deployment on GitHub Pages",
+                        isFree: false,
+                        duration: {
+                            hr: 1,
+                            mn: 25,
+                        },
+                    },
+                    {
+                        name: "Deployment on Heroku",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 15,
+                        },
+                    },
+                    {
+                        name: "Assignment",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 15,
+                        },
+                    },
+                    {
+                        name: "What next?",
+                        isFree: false,
+                        duration: {
+                            hr: 0,
+                            mn: 32,
                         },
                     },
                 ],

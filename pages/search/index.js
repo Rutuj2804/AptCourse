@@ -10,7 +10,7 @@ import courseData from "../../assets/data/data";
 
 const Search = () => {
 	const dispatch = useDispatch();
-
+	
 	const [search, setSearch] = useState("");
 
 	const [data, setData] = useState([]);
@@ -21,7 +21,6 @@ const Search = () => {
 	}, []);
 
 	const handleChange = (e) => {
-		console.log(e.target.value);
 		if (e.target.value === "") {
 			setData([]);
 		} else {
@@ -108,26 +107,26 @@ const Search = () => {
 							</h6>
 							<div className="scroller">
 								<div className="row">
-									{courseData.slice(0, 3).map((v) => (
+									{courseData.slice(0,3).map((v) => (
 										<div className="col-lg-4 col-md-6 col-12">
 											<CourseCard
-												key={v.id}
+												key={v?.id}
 												title={
-													v.name.slice(0, 35) + "..."
+													v?.name.slice(0, 35) + "..."
 												}
 												description={
-													v.subDescription.slice(
+													v?.subDescription.slice(
 														0,
 														60
 													) + "..."
 												}
-												isFree={v.isFree}
-												isSaved={v.isSaved}
+												isFree={v?.isFree}
+												isSaved={v?.isSaved}
 												registeredStudents={
-													v.registeredStudents
+													v?.registeredStudents
 												}
-												image={v.coverImage}
-												id={v.id}
+												image={v?.coverImage}
+												id={v?.id}
 											/>
 										</div>
 									))}
@@ -140,26 +139,26 @@ const Search = () => {
 							</h6>
 							<div className="scroller">
 								<div className="row">
-									{courseData.slice(1, 4).map((v) => (
+									{courseData.slice(1,4).map((v) => (
 										<div className="col-lg-4 col-md-6 col-12">
 											<CourseCard
-												key={v.id}
+												key={v?.id}
 												title={
-													v.name.slice(0, 35) + "..."
+													v?.name.slice(0, 35) + "..."
 												}
 												description={
-													v.subDescription.slice(
+													v?.subDescription.slice(
 														0,
 														60
 													) + "..."
 												}
-												isFree={v.isFree}
-												isSaved={v.isSaved}
+												isFree={v?.isFree}
+												isSaved={v?.isSaved}
 												registeredStudents={
-													v.registeredStudents
+													v?.registeredStudents
 												}
-												image={v.coverImage}
-												id={v.id}
+												image={v?.coverImage}
+												id={v?.id}
 											/>
 										</div>
 									))}
@@ -172,26 +171,26 @@ const Search = () => {
 							</h6>
 							<div className="scroller">
 								<div className="row">
-									{courseData.slice(0, 3).map((v) => (
+									{courseData.slice(2,5).map((v) => (
 										<div className="col-lg-4 col-md-6 col-12">
 											<CourseCard
-												key={v.id}
+												key={v?.id}
 												title={
-													v.name.slice(0, 35) + "..."
+													v?.name.slice(0, 35) + "..."
 												}
 												description={
-													v.subDescription.slice(
+													v?.subDescription.slice(
 														0,
 														60
 													) + "..."
 												}
-												isFree={v.isFree}
-												isSaved={v.isSaved}
+												isFree={v?.isFree}
+												isSaved={v?.isSaved}
 												registeredStudents={
-													v.registeredStudents
+													v?.registeredStudents
 												}
-												image={v.coverImage}
-												id={v.id}
+												image={v?.coverImage}
+												id={v?.id}
 											/>
 										</div>
 									))}
