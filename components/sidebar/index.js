@@ -47,7 +47,7 @@ const Sidebar = ({ open }) => {
 					</div>
 				</div>
 				<div className="buttons">
-					<SecondaryButton startIcon={<MdLogout />}>Logout</SecondaryButton>
+					<SecondaryButton startIcon={<MdLogout />} onClick={()=>router.push("/login")}>Logout</SecondaryButton>
 					<SecondaryButton startIcon={<MdShare/>}>Invite</SecondaryButton>
 				</div>
 			</div>

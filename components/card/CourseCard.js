@@ -1,23 +1,22 @@
 import Image from "next/image";
 import React from "react";
-import CourseOne from "../../assets/course1.jpg";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { useRouter } from "next/router";
 
-const CourseCard = ({ isSaved, progress }) => {
+const CourseCard = ({ isSaved, progress, image, title, description, isFree, registeredStudents, id }) => {
 	const router = useRouter();
 	return (
-		<div className="coursecard" onClick={() => router.push("/course")}>
-			<div className="image">
-				<Image src={CourseOne} alt="course" />
+		<div className="coursecard">
+			<div className="image" onClick={() => router.push(`/course/${id}`)}>
+				<Image src={image} alt="course" />
 			</div>
 			<div className="details">
-				<h6>Web Development By Rutuj Bokade</h6>
-				<p>
-					A premium web development course for ReactJS and NodeJS.
+				<h6 onClick={() => router.push(`/course/${id}`)}>{title}</h6>
+				<p onClick={() => router.push(`/course/${id}`)}>
+					{description}
 				</p>
-				<span className="tags isGreen">Free</span>
-				<span className="registration">2.5k+ Students</span>
+				<span className={isFree ? "tags isGreen" : "tags"} onClick={() => router.push(`/course/${id}`)}>{isFree? "Free": "Paid"}</span>
+				<span className="registration" onClick={() => router.push(`/course/${id}`)}>{registeredStudents} Students</span>
 				{!progress ? <div className="save">
 					{isSaved ? <span><AiFillHeart/></span>:<span><AiOutlineHeart/></span>}
 				</div> :
