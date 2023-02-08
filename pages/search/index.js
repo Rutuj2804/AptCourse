@@ -18,6 +18,7 @@ const Search = () => {
 	useEffect(() => {
 		dispatch(setLoading(true));
 		setTimeout(() => dispatch(setLoading(false)), 3000);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	const handleChange = (e) => {
@@ -78,9 +79,8 @@ const Search = () => {
 						<div className="scroller">
 							<div className="row">
 								{data.map((v) => (
-									<div className="col-lg-4 col-md-6 col-12">
+									<div className="col-lg-4 col-md-6 col-12" key={v.id}>
 										<CourseCard
-											key={v.id}
 											title={v.name.slice(0, 35) + "..."}
 											description={
 												v.subDescription.slice(0, 60) +
@@ -108,7 +108,7 @@ const Search = () => {
 							<div className="scroller">
 								<div className="row">
 									{courseData.slice(0,3).map((v) => (
-										<div className="col-lg-4 col-md-6 col-12">
+										<div className="col-lg-4 col-md-6 col-12" key={v.id}>
 											<CourseCard
 												key={v?.id}
 												title={
@@ -140,7 +140,7 @@ const Search = () => {
 							<div className="scroller">
 								<div className="row">
 									{courseData.slice(1,4).map((v) => (
-										<div className="col-lg-4 col-md-6 col-12">
+										<div className="col-lg-4 col-md-6 col-12" key={v.id}>
 											<CourseCard
 												key={v?.id}
 												title={
@@ -172,7 +172,7 @@ const Search = () => {
 							<div className="scroller">
 								<div className="row">
 									{courseData.slice(2,5).map((v) => (
-										<div className="col-lg-4 col-md-6 col-12">
+										<div className="col-lg-4 col-md-6 col-12" key={v.id}>
 											<CourseCard
 												key={v?.id}
 												title={

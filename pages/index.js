@@ -20,6 +20,7 @@ const Index = () => {
 	useEffect(() => {
 		dispatch(setLoading(true));
 		setTimeout(() => dispatch(setLoading(false)), 3000);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	useEffect(() => {
@@ -30,6 +31,7 @@ const Index = () => {
 			autoplay: true,
 			animationData: animationData,
 		});
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (

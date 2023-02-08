@@ -11,6 +11,7 @@ const MyCourses = () => {
 	useEffect(()=>{
 		dispatch(setLoading(true))
 		setTimeout(()=>dispatch(setLoading(false)), 3000)
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [])
 
 	return <div>

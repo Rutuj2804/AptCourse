@@ -14,6 +14,7 @@ const Loader = () => {
             autoplay: true,
             animationData: animationData
         })
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
 	return <div className="loader">

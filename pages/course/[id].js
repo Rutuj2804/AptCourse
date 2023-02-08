@@ -23,11 +23,13 @@ const Course = () => {
 
 	useEffect(()=>{
 		if(!courseData) router.push("/")
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [courseData])
 
 	useEffect(() => {
 		dispatch(setLoading(true));
 		setTimeout(() => dispatch(setLoading(false)), 3000);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (

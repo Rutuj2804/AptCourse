@@ -32,6 +32,7 @@ const VideoPlayer = ({children}) => {
     useEffect(()=>{
         videoRef.current.play()
         setIsPaused(false)
+		// eslint-disable-next-line react-hooks/exhaustive-deps
     }, [videoRef.current])
 
 	useEffect(() => {
@@ -47,6 +48,7 @@ const VideoPlayer = ({children}) => {
 			clearTimeout(timer);
 			hideAndShowControls();
 		});
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	const playPauseVideoState = () => {
@@ -82,6 +84,7 @@ const VideoPlayer = ({children}) => {
 		};
 
 		videoRef.current.addEventListener("timeupdate", timeupdateFunction);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	useEffect(() => {
@@ -94,6 +97,7 @@ const VideoPlayer = ({children}) => {
 				(e.offsetX / timelineWidth) * videoRef.current.duration;
 			setProgressTime(formatTime(percent));
 		});
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	useEffect(() => {
@@ -114,6 +118,7 @@ const VideoPlayer = ({children}) => {
 				dragFunction
 			);
 		});
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	useEffect(() => {
@@ -123,6 +128,7 @@ const VideoPlayer = ({children}) => {
 		// 		setPlayBackSpeedMenu(false)
 		// 	}
 		// })
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	const skipVideoLength = (v) => {
