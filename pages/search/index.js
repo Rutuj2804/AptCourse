@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { TbSearch } from "react-icons/tb";
 import CourseCard from "../../components/card/CourseCard";
 import { BsArrowRight } from "react-icons/bs";
@@ -11,10 +11,28 @@ import courseData from "../../assets/data/data";
 const Search = () => {
 	const dispatch = useDispatch();
 
+	const [search, setSearch] = useState("");
+
+	const [data, setData] = useState([]);
+
 	useEffect(() => {
 		dispatch(setLoading(true));
 		setTimeout(() => dispatch(setLoading(false)), 3000);
 	}, []);
+
+	const handleChange = (e) => {
+		console.log(e.target.value);
+		if (e.target.value === "") {
+			setData([]);
+		} else {
+			setData(
+				courseData.filter((v) =>
+					v.name.toLowerCase().includes(e.target.value.toLowerCase())
+				)
+			);
+		}
+		setSearch(e.target.value);
+	};
 
 	return (
 		<div className="search__wrapper">
@@ -32,6 +50,8 @@ const Search = () => {
 										type="text"
 										placeholder="Search course..."
 										required
+										value={search}
+										onChange={handleChange}
 									/>
 								</div>
 								<Button
@@ -44,90 +64,142 @@ const Search = () => {
 						</div>
 					</div>
 				</div>
-				<section className="most__loved">
-					<h6>
-						Most Loved Courses <BsArrowRight />
-					</h6>
-					<div className="scroller">
-						<div className="row">
-							{courseData.slice(0, 3).map((v) => (
-								<div className="col-lg-4 col-md-6 col-12">
-									<CourseCard
-										key={v.id}
-										title={v.name.slice(0, 35) + "..."}
-										description={
-											v.subDescription.slice(0, 60) +
-											"..."
-										}
-										isFree={v.isFree}
-										isSaved={v.isSaved}
-										registeredStudents={
-											v.registeredStudents
-										}
-										image={v.coverImage}
-										id={v.id}
-									/>
-								</div>
-							))}
+
+				{data.length > 0 || search !== "" ? (
+					<section>
+						<h6>
+							Search results for <strong>{search}</strong>{" "}
+							<BsArrowRight />
+						</h6>
+						{data.length ? null : (
+							<p>
+								No course exists as <strong>{search}</strong>
+							</p>
+						)}
+						<div className="scroller">
+							<div className="row">
+								{data.map((v) => (
+									<div className="col-lg-4 col-md-6 col-12">
+										<CourseCard
+											key={v.id}
+											title={v.name.slice(0, 35) + "..."}
+											description={
+												v.subDescription.slice(0, 60) +
+												"..."
+											}
+											isFree={v.isFree}
+											isSaved={v.isSaved}
+											registeredStudents={
+												v.registeredStudents
+											}
+											image={v.coverImage}
+											id={v.id}
+										/>
+									</div>
+								))}
+							</div>
 						</div>
-					</div>
-				</section>
-				<section className="free">
-					<h6>
-						Free Course <BsArrowRight />
-					</h6>
-					<div className="scroller">
-						<div className="row">
-							{courseData.slice(1, 4).map((v) => (
-								<div className="col-lg-4 col-md-6 col-12">
-									<CourseCard
-										key={v.id}
-										title={v.name.slice(0, 35) + "..."}
-										description={
-											v.subDescription.slice(0, 60) +
-											"..."
-										}
-										isFree={v.isFree}
-										isSaved={v.isSaved}
-										registeredStudents={
-											v.registeredStudents
-										}
-										image={v.coverImage}
-										id={v.id}
-									/>
+					</section>
+				) : (
+					<>
+						<section className="most__loved">
+							<h6>
+								Most Loved Courses <BsArrowRight />
+							</h6>
+							<div className="scroller">
+								<div className="row">
+									{courseData.slice(0, 3).map((v) => (
+										<div className="col-lg-4 col-md-6 col-12">
+											<CourseCard
+												key={v.id}
+												title={
+													v.name.slice(0, 35) + "..."
+												}
+												description={
+													v.subDescription.slice(
+														0,
+														60
+													) + "..."
+												}
+												isFree={v.isFree}
+												isSaved={v.isSaved}
+												registeredStudents={
+													v.registeredStudents
+												}
+												image={v.coverImage}
+												id={v.id}
+											/>
+										</div>
+									))}
 								</div>
-							))}
-						</div>
-					</div>
-				</section>
-				<section className="short__duration">
-					<h6>
-						Short Duration Courses <BsArrowRight />
-					</h6>
-					<div className="scroller">
-						<div className="row">
-							{courseData.slice(0, 3).map((v) => (
-								<div className="col-lg-4 col-md-6 col-12">
-									<CourseCard
-										key={v.id}
-										title={v.name.slice(0, 35) + "..."}
-										description={
-											v.subDescription.slice(0, 60) +
-											"..."
-										}
-										isFree={v.isFree}
-										isSaved={v.isSaved}
-										registeredStudents={
-											v.registeredStudents
-										}
-										image={v.coverImage}
-										id={v.id}
-									/>
+							</div>
+						</section>
+						<section className="free">
+							<h6>
+								Free Course <BsArrowRight />
+							</h6>
+							<div className="scroller">
+								<div className="row">
+									{courseData.slice(1, 4).map((v) => (
+										<div className="col-lg-4 col-md-6 col-12">
+											<CourseCard
+												key={v.id}
+												title={
+													v.name.slice(0, 35) + "..."
+												}
+												description={
+													v.subDescription.slice(
+														0,
+														60
+													) + "..."
+												}
+												isFree={v.isFree}
+												isSaved={v.isSaved}
+												registeredStudents={
+													v.registeredStudents
+												}
+												image={v.coverImage}
+												id={v.id}
+											/>
+										</div>
+									))}
 								</div>
-							))}
-						</div>
-					</div>
-				</section>
+							</div>
+						</section>
+						<section className="short__duration">
+							<h6>
+								Short Duration Courses <BsArrowRight />
+							</h6>
+							<div className="scroller">
+								<div className="row">
+									{courseData.slice(0, 3).map((v) => (
+										<div className="col-lg-4 col-md-6 col-12">
+											<CourseCard
+												key={v.id}
+												title={
+													v.name.slice(0, 35) + "..."
+												}
+												description={
+													v.subDescription.slice(
+														0,
+														60
+													) + "..."
+												}
+												isFree={v.isFree}
+												isSaved={v.isSaved}
+												registeredStudents={
+													v.registeredStudents
+												}
+												image={v.coverImage}
+												id={v.id}
+											/>
+										</div>
+									))}
+								</div>
+							</div>
+						</section>
+					</>
+				)}
 			</div>
 		</div>
 	);
